@@ -2,15 +2,16 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect } from 'react';
 import { UserWarning } from './UserWarning';
+import './styles/index.scss';
 import { getTodos, USER_ID } from './api/todos';
-import { Todo } from './types/Todo';
+import { Todo } from './types/todo';
 import { useState } from 'react';
 // import { client } from './utils/fetchClient';
 import cn from 'classnames';
-import { TodoFilter } from './types/Filters';
-import { ErrorTypes } from './types/ErrorTypes';
+import { TodoFilter } from './types/filters';
+import { ErrorTypes } from './types/errorTypes';
 import { TodoList } from './components/TodoList';
-import { Footer } from './components/Footer/Footer';
+import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);

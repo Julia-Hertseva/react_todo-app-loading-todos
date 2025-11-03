@@ -1,6 +1,6 @@
 import React from 'react';
-import { Todo as TodoType } from '../../types/Todo';
-import { Todo } from '../Todo/Todo';
+import { Todo as TodoType } from '../../types/todo';
+import { Todo } from '../Todo';
 
 type Props = {
   visibleTodos: TodoType[];
@@ -9,7 +9,7 @@ type Props = {
 export const TodoList: React.FC<Props> = ({ visibleTodos }) => {
   return (
     <section className="todoapp__main" data-cy="TodoList">
-      {/* This is a completed todo */}
+      {/* This is all visible todo */}
       {visibleTodos.map(todo => (
         <Todo key={todo.id} todo={todo} />
       ))}
